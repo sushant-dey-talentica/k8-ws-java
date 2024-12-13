@@ -1,3 +1,6 @@
+**K8 Coffee Shop** :
+
+---
 
 ## **K8 Coffee Shop Overview**  
 **Goal:**  
@@ -20,21 +23,17 @@ This application simulates the process of ordering coffee. The **Order Service**
    
 
    **Example Request:**
-   ```
-
+   ```json
    GET /order/place?coffeeType=cappuccino&quantity=1
-
-    ```
+   ```
 
    **Example Response:**
-   
-   ```
+   ```json
    {
     "coffeeType": "cappuccino",
     "quantity": 1,
     "status": "Confirmed"
-   }
-
+  }
    ```
 
 ---
@@ -52,9 +51,7 @@ This application simulates the process of ordering coffee. The **Order Service**
 
 
    **Example Response (GET /inventory/stock):**
-   
-```
-
+   ```json
    {
     "espressoShot": {
       "name": "Espresso Shot",
@@ -73,25 +70,20 @@ This application simulates the process of ordering coffee. The **Order Service**
       "quantity": 500
     }
   }
-```
+   ```
 
    **Example Request (POST /inventory/used):**
-
    ```json
-
    {
      "espressoShot": 1,
      "milk": 200,
      "milkFoam" : 50
    }
-
    ```
 
    **Example Response:**
    ```json
-  
    true/false
-
    ```
 
 ---
@@ -122,3 +114,24 @@ This application simulates the process of ordering coffee. The **Order Service**
 
 ---
 
+### **How to run the services**  
+1. Verify that java version is 21 or above using following : java -version
+2. Set / Export required variables in environment ( Use env file or set / export variables )
+Positive numerical values can be set for the following environment variables to override default values :
+ESPRESSO_SHOT_QUANTITY
+MILK_QUANTITY
+HOT_WATER_QUANTITY
+MILK_FOAM_QUANTITY
+3. Navigate to inventory-service folder : cd inventory-service
+4. mvn clean install
+5. mvn spring-boot:run
+6. Inventory service url should be set in INVENTORY_URL environment variable. Default value is http://localhost:8082
+7. In separate terminal navigate to order-service : cd order-service
+8. mvn clean install
+9. mvn spring-boot:run
+
+### **Technology Stack**
+- **Backend:**  
+  - Java (Spring Boot).
+- **API Communication:**  
+  - REST or gRPC for service-to-service communication.
