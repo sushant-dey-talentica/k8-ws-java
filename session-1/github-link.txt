@@ -1,0 +1,2 @@
+order service: https://hub.docker.com/repository/docker/sushantdey/order-service
+inventory service: https://hub.docker.com/repository/docker/sushantdey/inventory-service
