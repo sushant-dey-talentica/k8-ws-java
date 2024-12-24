@@ -1,3 +1,4 @@
+# update inventory url in order-service application.yml like: ```url: http://inventory-service:8082```
 sdk install java 21.0.5-amzn
 sdk use java 21.0.5-amzn
 cd order-service/
@@ -8,3 +9,6 @@ docker push sushantdey/order-service:latest
 docker network create coffee-shop-network
 docker run -itd -p8082:8082 --name inventory-service --network coffee-shop-network sushantdey/inventory-service:latest
 docker run -itd -p8080:8080 --name order-service --network coffee-shop-network sushantdey/order-service:latest
+git add .
+git commit -m 'updated inventory url property in order-service'
+git push
