@@ -1,2 +1,2 @@
 inventory:
-    url: http://inventory-service:8082
+    url: ${INVENTORY_URL}

@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  inventory-service:
+    build: ./inventory-service
+    ports:
+      - "8082:8082"
+    networks:
+      - coffee-shop-network
+
+  order-service:
+    build: ./order-service
+    ports:
+      - "8083:8080"
+    environment:
+      - INVENTORY_URL=http://inventory-service:8082
+    depends_on:
+      - inventory-service
+    networks:
+      - coffee-shop-network
+
+networks:
+  coffee-shop-network:
+    driver: bridge
