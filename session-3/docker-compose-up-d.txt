@@ -1,0 +1,52 @@
+@sushant-dey-talentica ➜ /workspaces/k8-ws-java (main) $ docker compose up -d
+WARN[0000] /workspaces/k8-ws-java/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Running 0/0
+[+] Running 0/1ntory-service  Building                                                                                                           0.1s 
+[+] Building 22.2s (8/9)                                                                                                               docker:default 
+[+] Building 31.2s (17/17) FINISHED                                                                                                    docker:default
+ => [inventory-service internal] load build definition from Dockerfile                                                                           0.0s
+ => => transferring dockerfile: 244B                                                                                                             0.0s 
+ => [order-service internal] load metadata for docker.io/library/eclipse-temurin:21                                                              0.9s
+ => [inventory-service internal] load .dockerignore                                                                                              0.0s
+ => => transferring context: 2B                                                                                                                  0.0s
+ => [order-service 1/4] FROM docker.io/library/eclipse-temurin:21@sha256:843686b2422d68890bb3ee90c5d08d9b325b9a2acf06ffca42351c2d187d3921       12.5s
+ => => resolve docker.io/library/eclipse-temurin:21@sha256:843686b2422d68890bb3ee90c5d08d9b325b9a2acf06ffca42351c2d187d3921                      0.0s
+ => => sha256:4c2afd91a87d1b2f93bb0c4f021644ade815979248b1f68bcae88b1b2f809336 22.95MB / 22.95MB                                                 1.2s
+ => => sha256:89e9bbcfa697ca9d2056ad0c815e6da943a4356633738d01b99b5faa2ebef7ca 157.59MB / 157.59MB                                               3.6s
+ => => sha256:843686b2422d68890bb3ee90c5d08d9b325b9a2acf06ffca42351c2d187d3921 7.18kB / 7.18kB                                                   0.0s
+ => => sha256:7e075e10e06e7a5fc85d450f85ed7b4d971c1851caf25605409a58e282d9dba9 1.94kB / 1.94kB                                                   0.0s
+ => => sha256:b8f97a7c5a1b9e606fa1e154c43595634a6ed7eede336ea41e9a98ab547cb585 6.04kB / 6.04kB                                                   0.0s
+ => => sha256:de44b265507ae44b212defcb50694d666f136b35c1090d9709068bc861bb2d64 29.75MB / 29.75MB                                                 0.8s
+ => => extracting sha256:de44b265507ae44b212defcb50694d666f136b35c1090d9709068bc861bb2d64                                                        1.8s 
+ => => sha256:1b9d1e181a2a2b6ed242e21c8a4d40d33cf851fd5522737a9aaa8a708d215f94 2.28kB / 2.28kB                                                   1.5s
+ => => sha256:11be3e61358234818e215b9d11d1584bb7cf33bbbe329ccff717d555f1be2994 159B / 159B                                                       1.5s
+ => => extracting sha256:4c2afd91a87d1b2f93bb0c4f021644ade815979248b1f68bcae88b1b2f809336                                                        0.9s 
+ => => extracting sha256:89e9bbcfa697ca9d2056ad0c815e6da943a4356633738d01b99b5faa2ebef7ca                                                        2.0s
+ => => extracting sha256:11be3e61358234818e215b9d11d1584bb7cf33bbbe329ccff717d555f1be2994                                                        0.0s
+ => => extracting sha256:1b9d1e181a2a2b6ed242e21c8a4d40d33cf851fd5522737a9aaa8a708d215f94                                                        0.0s
+ => [inventory-service internal] load build context                                                                                              0.1s
+ => => transferring context: 20.04MB                                                                                                             0.1s
+ => CACHED [order-service 2/4] WORKDIR /workspace/app                                                                                            0.0s 
+ => [inventory-service 3/4] COPY ./target/inventory-service-0.0.1-SNAPSHOT.jar /workspace/app/                                                   0.3s 
+ => [inventory-service 4/4] RUN apt-get update                                                                                                   7.7s 
+ => [inventory-service] exporting to image                                                                                                       0.9s 
+ => => exporting layers                                                                                                                          0.9s 
+ => => writing image sha256:a8f32a35d81a4848c66e3b8cff16d2be2e77f20413847fba339e227e0768d776                                                     0.0s 
+ => => naming to docker.io/library/k8-ws-java-inventory-service                                                                                  0.0s 
+ => [inventory-service] resolving provenance for metadata file                                                                                   0.0s 
+ => [order-service internal] load build definition from Dockerfile                                                                               0.0s 
+ => => transferring dockerfile: 236B                                                                                                             0.0s 
+ => [order-service internal] load .dockerignore                                                                                                  0.0s
+ => => transferring context: 2B                                                                                                                  0.0s
+ => [order-service internal] load build context                                                                                                  0.1s 
+ => => transferring context: 20.04MB                                                                                                             0.1s 
+ => [order-service 3/4] COPY ./target/order-service-0.0.1-SNAPSHOT.jar /workspace/app/                                                           0.5s 
+ => [order-service 4/4] RUN apt-get update                                                                                                       7.3s 
+ => [order-service] exporting to image                                                                                                           0.6s 
+ => => exporting layers                                                                                                                          0.6s
+[+] Running 5/5image sha256:db87ffa0cf69cdf4f8cf9f4363fd9f595d25f76465359097ff8627d3a01c3eb0                                                     0.0s
+ ✔ Service inventory-service                 Built                                                                                              22.4s 
+ ✔ Service order-service                     Built                                                                                               9.0s 
+ ✔ Network k8-ws-java_coffee-shop-network    Created                                                                                             0.1s 
+ ✔ Container k8-ws-java-inventory-service-1  Started                                                                                             0.4s 
+ ✔ Container k8-ws-java-order-service-1      Started

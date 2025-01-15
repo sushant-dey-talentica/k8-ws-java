@@ -1,0 +1,40 @@
+@sushant-dey-talentica ➜ /workspaces/k8-ws-java (main) $ docker compose logs
+WARN[0000] /workspaces/k8-ws-java/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+order-service-1  | 
+order-service-1  |   .   ____          _            __ _ _
+order-service-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+order-service-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+order-service-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+order-service-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+order-service-1  |  =========|_|==============|___/=/_/_/_/
+order-service-1  | 
+order-service-1  |  :: Spring Boot ::                (v3.3.4)
+order-service-1  | 
+order-service-1  | 2025-01-15T12:43:49.046Z  INFO 1 --- [           main] c.t.w.order.OrderServiceApplication      : Starting OrderServiceApplication v0.0.1-SNAPSHOT using Java 21.0.5 with PID 1 (/workspace/app/order-service-0.0.1-SNAPSHOT.jar started by root in /workspace/app)
+order-service-1  | 2025-01-15T12:43:49.059Z  INFO 1 --- [           main] c.t.w.order.OrderServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+order-service-1  | 2025-01-15T12:43:51.880Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+order-service-1  | 2025-01-15T12:43:51.913Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+order-service-1  | 2025-01-15T12:43:51.913Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+order-service-1  | 2025-01-15T12:43:52.001Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+order-service-1  | 2025-01-15T12:43:52.003Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2721 ms
+order-service-1  | 2025-01-15T12:43:52.646Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+order-service-1  | 2025-01-15T12:43:52.663Z  INFO 1 --- [           main] c.t.w.order.OrderServiceApplication      : Started OrderServiceApplication in 5.164 seconds (process running for 6.538)
+inventory-service-1  | 
+inventory-service-1  |   .   ____          _            __ _ _
+inventory-service-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+inventory-service-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+inventory-service-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+inventory-service-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+inventory-service-1  |  =========|_|==============|___/=/_/_/_/
+inventory-service-1  | 
+inventory-service-1  |  :: Spring Boot ::                (v3.3.4)
+inventory-service-1  | 
+inventory-service-1  | 2025-01-15T12:43:48.209Z  INFO 1 --- [           main] c.t.w.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 21.0.5 with PID 1 (/workspace/app/inventory-service-0.0.1-SNAPSHOT.jar started by root in /workspace/app)
+inventory-service-1  | 2025-01-15T12:43:48.219Z  INFO 1 --- [           main] c.t.w.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+inventory-service-1  | 2025-01-15T12:43:51.096Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+inventory-service-1  | 2025-01-15T12:43:51.118Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+inventory-service-1  | 2025-01-15T12:43:51.118Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+inventory-service-1  | 2025-01-15T12:43:51.228Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+inventory-service-1  | 2025-01-15T12:43:51.230Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2791 ms
+inventory-service-1  | 2025-01-15T12:43:52.255Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+inventory-service-1  | 2025-01-15T12:43:52.297Z  INFO 1 --- [           main] c.t.w.i.InventoryServiceApplication      : Started InventoryServiceApplication in 5.543 seconds (process running for 6.707)

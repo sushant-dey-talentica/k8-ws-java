@@ -1,0 +1,5 @@
+@sushant-dey-talentica ➜ /workspaces/k8-ws-java (main) $ docker compose ps
+WARN[0000] /workspaces/k8-ws-java/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+NAME                             IMAGE                          COMMAND                  SERVICE             CREATED         STATUS         PORTS
+k8-ws-java-inventory-service-1   k8-ws-java-inventory-service   "/__cacert_entrypoin…"   inventory-service   7 minutes ago   Up 7 minutes   0.0.0.0:8082->8082/tcp, :::8082->8082/tcp
+k8-ws-java-order-service-1       k8-ws-java-order-service       "/__cacert_entrypoin…"   order-service       7 minutes ago   Up 7 minutes   0.0.0.0:8083->8080/tcp, [::]:8083->8080/tcp
