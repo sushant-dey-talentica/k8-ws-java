@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-service
+  template:
+    metadata:
+      labels:
+        app: order-service
+    spec:
+      containers:
+      - name: order-service
+        image: sushantdey/order-service:latest
+        env:
+        - name: INVENTORY_URL
+          value: "http://10.100.185.214:8082"
+        ports:
+        - containerPort: 8080
