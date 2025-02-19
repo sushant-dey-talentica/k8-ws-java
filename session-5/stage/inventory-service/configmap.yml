@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: inventory-service-config
+  namespace: stage
+data:
+  espresso-shot: "1000"
+  milk: "1000"
+  milk-foam: "6000"
+  hot-water: "99999999"
