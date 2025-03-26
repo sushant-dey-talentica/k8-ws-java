@@ -6,7 +6,6 @@ minikube addons enable ingress
 kubectl port-forward service/ingress-nginx-controller -n ingress-nginx 8080:80
 
 # HPA
-
 ## enable metrics server
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
@@ -17,5 +16,5 @@ kubectl edit deployment metrics-server -n kube-system
 kubectl top pods -n prod
 
 ## Generate load for testing HPA
-kubectl run load-generator --image busybox -- /bin/sh -c "while true; do wget -q -O- http://192.168.49.2/inventory/stock ; done"
-kubectl run load-generator --image busybox -- /bin/sh -c "while true; do wget -q -O- http://192.168.49.2/order/place?coffeeType=cappuccino&quantity=1 ; done"
+kubectl run load-generator-inventory-service --image busybox -- /bin/sh -c "while true; do wget -q -O- http://192.168.49.2/inventory/stock ; done"
+kubectl run load-generator-order-service --image busybox -- /bin/sh -c "while true; do wget -q -O- http://192.168.49.2/order/place?coffeeType=cappuccino&quantity=1 ; done"

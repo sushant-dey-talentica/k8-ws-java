@@ -41,6 +41,6 @@ spec:
               key: hot-water
         resources:
           requests:
-            cpu: "100m"
+            cpu: "10m"
           limits:
-            cpu: "200"
+            cpu: "100m"
