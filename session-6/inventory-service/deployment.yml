@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-service-deployment
+  namespace: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inventory-service
+  template:
+    metadata:
+      labels:
+        app: inventory-service
+    spec:
+      containers:
+      - name: inventory-service
+        image: sushantdey/inventory-service:latest
+        ports:
+        - containerPort: 8082
+        env:
+        - name: espresso-shot
+          valueFrom:
+            configMapKeyRef:
+              name: inventory-service-config
+              key: espresso-shot
+        - name: milk
+          valueFrom:
+            configMapKeyRef:
+              name: inventory-service-config
+              key: milk
+        - name: milk-foam
+          valueFrom:
+            configMapKeyRef:
+              name: inventory-service-config
+              key: milk-foam
+        - name: hot-water
+          valueFrom:
+            configMapKeyRef:
+              name: inventory-service-config
+              key: hot-water
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "200"
